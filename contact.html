@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Me - My iOS App</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Include Vue.js -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Navigation -->
+  <nav class="bg-white shadow">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-xl font-bold">CostLow</a>
+      <div>
+        <a href="privacy.html" class="text-gray-600 hover:text-gray-800 mr-4">Privacy Policy</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contact Form -->
+  <section class="container mx-auto px-4 py-10" id="contact-app">
+    <h1 class="text-3xl font-bold mb-6">Contact Me</h1>
+    <form @submit.prevent="submitForm" class="max-w-lg mx-auto bg-white p-8 rounded shadow">
+      <div class="mb-4">
+        <label class="block text-gray-700 mb-2">Name</label>
+        <input v-model="name" type="text" class="w-full border px-3 py-2 rounded" required>
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 mb-2">Email</label>
+        <input v-model="email" type="email" class="w-full border px-3 py-2 rounded" required>
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 mb-2">Message</label>
+        <textarea v-model="message" class="w-full border px-3 py-2 rounded" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white shadow py-4">
+    <div class="container mx-auto px-4 text-center text-gray-600">
+      &copy; 2024 CostLow. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Vue.js Script -->
+  <script>
+    new Vue({
+      el: '#contact-app',
+      data: {
+        name: '',
+        email: '',
+        message: ''
+      },
+      methods: {
+        submitForm() {
+          // Handle form submission (e.g., send data to an email or backend server)
+          alert('Thank you for contacting us, ' + this.name + '!');
+          // Reset form fields
+          this.name = '';
+          this.email = '';
+          this.message = '';
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>
