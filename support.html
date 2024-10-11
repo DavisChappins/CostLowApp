@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support - CostLow</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function toggleSubItem(subItem) {
+      const content = document.getElementById(subItem);
+      content.classList.toggle('hidden');
+    }
+  </script>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Navigation -->
+  <nav class="bg-white shadow">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-xl font-bold">CostLow</a>
+      <div>
+        <a href="privacy.html" class="text-gray-600 hover:text-gray-800 mr-4">Privacy Policy</a>
+		<a href="support.html" class="text-gray-600 hover:text-gray-800 mr-4">Support</a>
+        <a href="contact.html" class="text-gray-600 hover:text-gray-800 mr-4">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Hero Section -->
+  <section class="container mx-auto px-4 py-10 text-center">
+    <h1 class="text-4xl font-bold mb-6">How can we help?</h1>
+    <input type="text" placeholder="Search the knowledge base" class="w-full border px-4 py-2 rounded-md shadow">
+  </section>
+
+  <!-- Support Categories with Sub-Items Expandable -->
+  <section class="container mx-auto px-4 py-10 space-y-4">
+
+    <!-- Getting Started -->
+    <div class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-xl font-bold mb-2">Getting Started</h2>
+      <ul class="list-disc list-inside">
+        <li class="cursor-pointer" onclick="toggleSubItem('create-account')">How to create an account</li>
+        <div id="create-account" class="hidden text-gray-600 mt-2">
+          <p>This guide will help you step by step to...</p>
+        </div>
+
+        <li class="cursor-pointer" onclick="toggleSubItem('first-steps')">First steps after downloading the app</li>
+        <div id="first-steps" class="hidden text-gray-600 mt-2">
+          <p>Here are the initial steps to get you familiar with the app...</p>
+        </div>
+
+        <li class="cursor-pointer" onclick="toggleSubItem('main-features')">Understanding the main features</li>
+        <div id="main-features" class="hidden text-gray-600 mt-2">
+          <p>Learn more about the core features of CostLow...</p>
+        </div>
+      </ul>
+    </div>
+
+    <!-- Submitting Deals -->
+    <div class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-xl font-bold mb-2">Submitting Deals</h2>
+      <ul class="list-disc list-inside">
+        <li class="cursor-pointer" onclick="toggleSubItem('submit-deal')">How to submit a deal</li>
+        <div id="submit-deal" class="hidden text-gray-600 mt-2">
+          <p>Steps to submit a deal, including details on pictures...</p>
+        </div>
+
+        <li class="cursor-pointer" onclick="toggleSubItem('best-pictures')">Taking the best pictures for deals</li>
+        <div id="best-pictures" class="hidden text-gray-600 mt-2">
+          <p>Tips and tricks for taking high-quality deal photos...</p>
+        </div>
+
+        <li class="cursor-pointer" onclick="toggleSubItem('what-info')">What information to include</li>
+        <div id="what-info" class="hidden text-gray-600 mt-2">
+          <p>Ensure your deal submissions contain the right information...</p>
+        </div>
+      </ul>
+    </div>
+
+    <!-- Shopping List -->
+    <div class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-xl font-bold mb-2">Shopping List</h2>
+      <ul class="list-disc list-inside">
+        <li class="cursor-pointer" onclick="toggleSubItem('add-shopping-list')">Adding items to your shopping list</li>
+        <div id="add-shopping-list" class="hidden text-gray-600 mt-2">
+          <p>Here's how you can quickly add items to your shopping list...</p>
+        </div>
+
+        <li class="cursor-pointer" onclick="toggleSubItem('manage-list')">Managing and organizing your list</li>
+        <div id="manage-list" class="hidden text-gray-600 mt-2">
+          <p>Organize your shopping list with these helpful features...</p>
+        </div>
+
+        <li class="cursor-pointer" onclick="toggleSubItem('share-list')">Sharing your shopping list</li>
+        <div id="share-list" class="hidden text-gray-600 mt-2">
+          <p>Steps to share your shopping list with friends or family...</p>
+        </div>
+      </ul>
+    </div>
+
+    <!-- Watch List -->
+    <div class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-xl font-bold mb-2">Watch List</h2>
+      <ul class="list-disc list-inside">
+        <li class="cursor-pointer" onclick="toggleSubItem('add-watch-list')">How to add items to your watch list</li>
+        <div id="add-watch-list" class="hidden text-gray-600 mt-2">
+          <p>Learn how to add items to your watch list to monitor price changes...</p>
+        </div>
+
+        <li class="cursor-pointer" onclick="toggleSubItem('track-price')">Tracking price changes</li>
+        <div id="track-price" class="hidden text-gray-600 mt-2">
+          <p>Monitor price changes on your watched items with this feature...</p>
+        </div>
+
+        <li class="cursor-pointer" onclick="toggleSubItem('remove-watch-list')">Removing items from your watch list</li>
+        <div id="remove-watch-list" class="hidden text-gray-600 mt-2">
+          <p>How to remove items from your watch list...</p>
+        </div>
+      </ul>
+    </div>
+
+    <!-- FAQ -->
+    <div class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-xl font-bold mb-2">FAQ</h2>
+      <ul class="list-disc list-inside">
+        <li class="cursor-pointer" onclick="toggleSubItem('reset-password')">How do I reset my password?</li>
+        <div id="reset-password" class="hidden text-gray-600 mt-2">
+          <p>Step-by-step instructions to...</p>
+        </div>
+
+        <li class="cursor-pointer" onclick="toggleSubItem('app-crashes')">What do I do if the app crashes?</li>
+        <div id="app-crashes" class="hidden text-gray-600 mt-2">
+          <p>Troubleshooting steps in case the app crashes...</p>
+        </div>
+
+        <li class="cursor-pointer" onclick="toggleSubItem('contact-support')">How do I contact support?</li>
+        <div id="contact-support" class="hidden text-gray-600 mt-2">
+          <p>Contact us at costlowapp.com/contact.html for further assistance...</p>
+        </div>
+      </ul>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white shadow py-4">
+    <div class="container mx-auto px-4 text-center text-gray-600">
+      &copy; 2024 CostLow. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
